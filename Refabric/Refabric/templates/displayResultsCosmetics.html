@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title> Refabric </title>
+        <script src="script.js"></script>
+        <script src="../script.js"></script>
+        <script>
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            const searchTerm = params.get('search') || '';
+            const matches = searchItems(searchTerm);
+            let output = "";
+            if (matches.length === 0) {
+                output = "<p>No results found.</p>";
+            } else {
+                output = "<ul>";
+                matches.forEach(item => {
+                    output += `<li>
+                        <strong>${item.name}</strong><br>
+                        Category: ${item.category}<br>
+                        SubCategory: ${item.subCategory}<br>
+                        <a href="${item.link}" target="_blank">View DIY</a>
+                    </li>`;
+                });
+                output += "</ul>";
+            }
+            document.getElementById("output").innerHTML = output;
+        };
+        </script>
+    </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<body>
+      <div id = "header2">
+          <h1> Refabric <img id='logo'src="logo.png" alt="logo" width="50" height="50"></h1>
+          <p> Where trash becomes treasure</p>
+          
+      </div>
+        <div class="topnav">
+<form action="displayResultsCosmetics.html" method="get">
+            <input id="searchWord" type="text" name="search" placeholder="Search..">
+        </form>
+      
+
+</div>
+<h3 class="clear"> Enter keyword to find your upcycling DIY</h3>
+
+<div id="container"> 
+<div id=output>
+    
+</div> 
+
+
+<h4 class="helpText"> Cant find what your looking for? Tap <a href="resources.html">here</a> to find resources to help!</h4>
+
+   
+<div class="backButton">
+      <a href="index.html"><button> Home </button></a>
+      </div>
+ </div>
+      <div >
+
+
+
+
+
+
+     </body> 
+    
+</html>
+
+
+
+
+

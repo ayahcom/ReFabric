@@ -1,0 +1,76 @@
+<!DOCTYPE htmL>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title> Refabric </title>
+        
+        <script>
+function goToNextPage() {
+    const sliderValue = document.getElementById("mySlider").value;
+    if (sliderValue == "0") {
+        window.location.href = "novice.html";
+    } else if (sliderValue == "1") {
+        window.location.href = "beginner.html";
+    } else if (sliderValue == "2") {
+        window.location.href = "intermediate.html";
+    } else if (sliderValue == "3") {
+        window.location.href = "expert.html";
+    }
+}
+</script>
+
+    </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<body>
+      <div id = "header2">
+        <h1> Refabric <img id='logo'src="logo.png" alt="logo" width="50" height="50"></h1> 
+         
+          <p> Where trash becomes treasure</p>
+      </div>
+     
+        <div id = buttoncontainer>
+          <h2 id="text"> <p>
+            First, let's rank your sustainability knowledge!
+          
+        </div>
+        </p></h2>
+        <div id="labels" style="display: flex; justify-content: space-between; padding: 0 50px; margin-top:-15px; margin-bottom:-45px;">
+          <p>Novice</p>
+          <p>Expert</p>
+        </div>
+      <!-- find a away to add a caption under the first and last point
+      the first point is "novice" the last point is "expert" 
+      bc i couldnt figure it out LMAO -->
+        <div class="slider-container">
+    <input type="range" id="mySlider" min="0" max="3" step="1" value="1">
+    
+    
+    <div class="slider-points">
+        <span class="point" data-value="0"></span> 
+        <span class="point" data-value="1"></span>
+        <span class="point" data-value="2"></span>
+        <span class="point" data-value="3"></span>
+      </div>
+
+        
+      
+    </div>
+    <span id="sliderValue"></span>
+</div>
+
+        <div id = next>
+           <button onclick="location.href='learn.html'">Back</button>
+          <button onclick="goToNextPage()">Next</button>
+            
+        </div>
+
+  
+    </body>
+    
+    
+</html>
